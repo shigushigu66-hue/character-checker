@@ -26,6 +26,75 @@ function sortCharacters(characters) {
     });
 }
 
+function exportJSON() {
+
+    const save = getSaveData();
+
+    const json =
+        JSON.stringify(save, null, 2);
+
+    const blob = new Blob(
+        [json],
+        {
+            type: "application/json"
+        }
+    );
+
+    const link =
+        document.createElement("a");
+
+    link.href =
+        URL.createObjectURL(blob);
+
+    link.download =
+        "character_backup.json";
+
+    link.click();
+
+    URL.revokeObjectURL(link.href);
+}
+
+async function importJSON(event) {
+
+    const file =
+        event.target.files[0];
+
+    if (!file) {
+        return;
+    }
+
+    try {
+
+        const text =
+            await file.text();
+
+        const data =
+            JSON.parse(text);
+
+if (
+    !confirm(
+        "現在のデータを上書きしますか？"
+    )
+) {
+    return;
+}
+
+        saveData(data);
+
+        await loadCharacters();
+
+        alert(
+            "データを読み込みました"
+        );
+
+    } catch {
+
+        alert(
+            "JSONファイルが正しくありません"
+        );
+    }
+}
+
 async function loadCharacters() {
     const response = await fetch("data/characters.json");
     const characters = await response.json();
@@ -188,6 +257,14 @@ document
 document
     .getElementById("export-btn")
     .addEventListener("click", exportPNG);
+
+    document
+    .getElementById("export-json-btn")
+    .addEventListener("click", exportJSON);
+
+document
+    .getElementById("import-json")
+    .addEventListener("change", importJSON);
 
 async function exportPNG() {
 
