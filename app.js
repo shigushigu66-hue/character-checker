@@ -224,7 +224,7 @@ async function exportPNG() {
 
     const canvas = await html2canvas(pngLayout, {
         backgroundColor: "#f5f7fb",
-        scale: 3,
+        scale: 2,
         useCORS: true
     });
 
