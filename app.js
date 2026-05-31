@@ -9,6 +9,23 @@ function saveData(data) {
     localStorage.setItem("characterData", JSON.stringify(data));
 }
 
+function sortCharacters(characters) {
+
+    const nationOrder = {
+        "神霄帝国": 1,
+        "イズモ": 2,
+        "ミスト": 3,
+        "エレン": 4,
+        "聖教会": 5,
+        "ウトピア": 6,
+        "中立": 7,
+    };
+
+    return characters.sort((a, b) => {
+        return nationOrder[a.nation] - nationOrder[b.nation];
+    });
+}
+
 async function loadCharacters() {
     const response = await fetch("data/characters.json");
     const characters = await response.json();
@@ -18,7 +35,34 @@ async function loadCharacters() {
 
     grid.innerHTML = "";
 
-    characters.forEach(character => {
+const keyword =
+    document
+        .getElementById("search-box")
+        .value
+        .trim()
+        .toLowerCase();
+
+const nation =
+    document
+        .getElementById("nation-filter")
+        .value;
+
+sortCharacters(characters);
+
+characters.forEach(character => {
+
+    const matchName =
+        character.name
+            .toLowerCase()
+            .includes(keyword);
+
+    const matchNation =
+        nation === "all" ||
+        character.nation === nation;
+
+    if (!matchName || !matchNation) {
+        return;
+    }
 
         if (!save[character.id]) {
             save[character.id] = {
@@ -130,9 +174,16 @@ async function loadCharacters() {
     saveData(save);
 }
 
-loadCharacters();
 
 loadCharacters();
+
+document
+    .getElementById("search-box")
+    .addEventListener("input", loadCharacters);
+
+document
+    .getElementById("nation-filter")
+    .addEventListener("change", loadCharacters);
 
 document
     .getElementById("export-btn")
@@ -144,8 +195,19 @@ async function exportPNG() {
 
     const response = await fetch("data/characters.json");
     const characters = await response.json();
+    sortCharacters(characters);
 
-    const pngLayout = document.getElementById("png-layout");
+const exportArea = document.createElement("div");
+
+exportArea.style.position = "absolute";
+exportArea.style.left = "-99999px";
+exportArea.style.top = "0";
+
+exportArea.style.width = "1024px";
+
+exportArea.style.background = "#f5f7fb";
+
+document.body.appendChild(exportArea);
 
     const now = new Date();
 
@@ -154,7 +216,7 @@ async function exportPNG() {
         `${String(now.getMonth() + 1).padStart(2, "0")}/` +
         `${String(now.getDate()).padStart(2, "0")}`;
 
-    pngLayout.innerHTML = `
+    exportArea.innerHTML = `
         <div class="png-header">
             <h1>キャラ装備所持率チェッカー</h1>
             <div class="png-date">${dateText}</div>
@@ -163,9 +225,10 @@ async function exportPNG() {
         <div class="png-grid"></div>
     `;
 
-    const pngGrid = pngLayout.querySelector(".png-grid");
+const pngGrid =
+    exportArea.querySelector(".png-grid");
 
-    characters.forEach(character => {
+characters.forEach(character => {
 
         const data = save[character.id] || {
             char: -1,
@@ -220,15 +283,24 @@ async function exportPNG() {
         pngGrid.appendChild(card);
     });
 
-    pngLayout.style.display = "block";
+await Promise.all(
+    [...exportArea.querySelectorAll("img")].map(img => {
+        if (img.complete) return Promise.resolve();
 
-    const canvas = await html2canvas(pngLayout, {
-        backgroundColor: "#f5f7fb",
-        scale: 2,
-        useCORS: true
-    });
+        return new Promise(resolve => {
+            img.onload = resolve;
+            img.onerror = resolve;
+        });
+    })
+);
 
-    pngLayout.style.display = "none";
+const canvas = await html2canvas(exportArea, {
+    backgroundColor: "#f5f7fb",
+    scale: 2,
+    useCORS: true
+});
+
+exportArea.remove();
 
     const link = document.createElement("a");
 

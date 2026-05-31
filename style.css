@@ -152,6 +152,22 @@ body {
         0 4px 15px rgba(0,0,0,0.15);
 }
 
+.filter-bar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+#search-box {
+    padding: 8px;
+    width: 220px;
+}
+
+#nation-filter {
+    padding: 8px;
+}
+
 @media (max-width: 600px) {
 
     .header {

@@ -13,11 +13,31 @@
     <button id="export-btn">PNG出力</button>
 </div>
 
+<div class="filter-bar">
+
+    <input
+        type="text"
+        id="search-box"
+        placeholder="キャラ名検索">
+
+    <select id="nation-filter">
+        <option value="all">全陣営</option>
+        <option value="神霄帝国">神霄帝国</option>
+        <option value="イズモ">イズモの国</option>
+        <option value="ミスト">ミスト王国</option>
+        <option value="エレン">エレン連邦</option>
+        <option value="聖教会">聖教会</option>
+        <option value="ウトピア">ウトピア</option>
+        <option value="中立">中立</option>
+    </select>
+
+</div>
+
 <div id="character-grid"></div>
 
 <div id="png-layout" style="display:none;"></div>
 
-<script src="app.js"></script>
+<script src="app.js?v=2"></script>
 
 </body>
 </html>
