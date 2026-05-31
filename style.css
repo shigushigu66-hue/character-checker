@@ -145,7 +145,7 @@ body {
 /* 本体＋装備完凸 */
 
 .png-card.perfect {
-    border: 3px solid gold;
+    border: 3px solid red;
 
     box-shadow:
         0 0 8px rgba(255,215,0,0.7),
