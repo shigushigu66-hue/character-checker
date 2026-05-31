@@ -1,0 +1,173 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+#export-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 12px;
+}
+
+.character-card {
+    width: 170px;
+    border: 1px solid #444;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #222;
+    color: white;
+}
+
+.character-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.character-card:hover {
+    transform: scale(1.03);
+}
+
+.status {
+    padding: 8px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+.label {
+    width: 36px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.row button {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.not-owned {
+    opacity: 0.6;
+    filter: grayscale(100%);
+}
+
+/* PNG出力用 */
+
+#png-layout {
+    background: #f5f7fb;
+    padding: 30px;
+    font-family: sans-serif;
+}
+
+.png-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.png-header h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.png-date {
+    margin-top: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+.png-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 130px);
+    gap: 10px;
+}
+
+.png-card {
+    width: 130px;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,0.15);
+
+    transition: 0.2s;
+}
+
+.png-card img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    display: block;
+}
+
+.png-status {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* 未所持 */
+
+.png-card.missing {
+    opacity: 0.45;
+    filter: grayscale(100%);
+}
+
+/* 本体完凸 */
+
+.png-card.max-char {
+    border: 3px solid #4a90ff;
+}
+
+/* 本体＋装備完凸 */
+
+.png-card.perfect {
+    border: 3px solid gold;
+
+    box-shadow:
+        0 0 8px rgba(255,215,0,0.7),
+        0 4px 15px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 600px) {
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+        margin: 0;
+    }
+
+    #export-btn {
+        width: 100%;
+    }
+
+    #character-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+}
