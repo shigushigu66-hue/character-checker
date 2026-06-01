@@ -26,6 +26,8 @@ function sortCharacters(characters) {
     });
 }
 
+
+
 function exportJSON() {
 
     const save = getSaveData();
@@ -282,6 +284,10 @@ if (
 loadCharacters();
 
 document
+    .getElementById("reset-btn")
+    .addEventListener("click", resetData);
+
+document
     .getElementById("ownership-filter")
     .addEventListener(
         "change",
@@ -427,4 +433,21 @@ exportArea.remove();
     link.href = canvas.toDataURL("image/png");
 
     link.click();
+}
+
+function resetData() {
+
+    if (
+        !confirm(
+            "全キャラのデータをリセットしますか？"
+        )
+    ) {
+        return;
+    }
+
+    localStorage.removeItem(
+        "characterData"
+    );
+
+    loadCharacters();
 }
