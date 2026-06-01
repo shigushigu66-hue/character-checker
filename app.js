@@ -46,8 +46,22 @@ function exportJSON() {
     link.href =
         URL.createObjectURL(blob);
 
-    link.download =
-        "character_backup.json";
+const now = new Date();
+
+const fileName =
+    `backup_${
+        now.getFullYear()
+    }${
+        String(now.getMonth() + 1).padStart(2, "0")
+    }${
+        String(now.getDate()).padStart(2, "0")
+    }_${
+        String(now.getHours()).padStart(2, "0")
+    }${
+        String(now.getMinutes()).padStart(2, "0")
+    }.json`;
+
+link.download = fileName;
 
     link.click();
 
@@ -116,6 +130,11 @@ const nation =
         .getElementById("nation-filter")
         .value;
 
+const ownership =
+    document
+        .getElementById("ownership-filter")
+        .value;
+
 sortCharacters(characters);
 
 characters.forEach(character => {
@@ -125,13 +144,29 @@ characters.forEach(character => {
             .toLowerCase()
             .includes(keyword);
 
-    const matchNation =
-        nation === "all" ||
-        character.nation === nation;
+const matchNation =
+    nation === "all" ||
+    character.nation === nation;
 
-    if (!matchName || !matchNation) {
-        return;
-    }
+const isOwned =
+    save[character.id] &&
+    (
+        save[character.id].char !== -1 ||
+        save[character.id].equip !== -1
+    );
+
+const matchOwnership =
+    ownership === "all" ||
+    (ownership === "owned" && isOwned) ||
+    (ownership === "unowned" && !isOwned);
+
+if (
+    !matchName ||
+    !matchNation ||
+    !matchOwnership
+) {
+    return;
+}
 
         if (!save[character.id]) {
             save[character.id] = {
@@ -245,6 +280,13 @@ characters.forEach(character => {
 
 
 loadCharacters();
+
+document
+    .getElementById("ownership-filter")
+    .addEventListener(
+        "change",
+        loadCharacters
+    );
 
 document
     .getElementById("search-box")
