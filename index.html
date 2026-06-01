@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Character Checker</title>
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <body>
 
 <div class="header">
     <h1>キャラ所持チェッカー</h1>
-    <button id="export-btn">PNG出力</button>
+<div class="nav-buttons">
+        <button id="export-btn">
+            PNG出力
+        </button>
+
+        <a href="equipment.html">
+            装備チェッカー
+        </a>
+    </div>
     <button id="reset-btn">
     リセット
 </button>
@@ -54,7 +62,7 @@
 
 <div id="png-layout" style="display:none;"></div>
 
-<script src="app.js?v=5"></script>
+<script src="app.js?v=6"></script>
 
 </body>
 </html>

@@ -1,0 +1,240 @@
+[
+ {
+    "id": "weapon001",
+    "slot": "weapon",
+    "name": "神草廻り",
+    "stats": ["攻撃"]
+  },
+  {
+    "id": "weapon002",
+    "slot": "weapon",
+    "name": "短刀・雪代",
+    "stats": ["攻撃", "速度"]
+  },
+  {
+    "id": "weapon003",
+    "slot": "weapon",
+    "name": "スマートハルバード",
+    "stats": ["統率"]
+  },
+  {
+    "id": "weapon004",
+    "slot": "weapon",
+    "name": "八方山河扇",
+    "stats": ["士気", "速度"]
+  },
+    {
+    "id": "weapon005",
+    "slot": "weapon",
+    "name": "無上の錫杖",
+    "stats": ["統率", "速度"]
+  },
+  {
+    "id": "weapon006",
+    "slot": "weapon",
+    "name": "強襲戦戟",
+    "stats": ["士気"]
+  },
+  {
+    "id": "weapon007",
+    "slot": "weapon",
+    "name": "癒雪の蒼角",
+    "stats": ["統率", "速度"]
+  },
+  {
+    "id": "head001",
+     "slot": "head",
+    "name": "栄光たる角飾り",
+    "stats": ["攻撃"]
+  },
+    {
+    "id": "head002",
+     "slot": "head",
+    "name": "アビスヘルメット",
+    "stats": ["統率"]
+  },
+  {
+    "id": "head003",
+     "slot": "head",
+    "name": "日出の冠",
+    "stats": ["士気"]
+  },
+  {
+    "id": "head004",
+     "slot": "head",
+    "name": "鶯雪花冠",
+    "stats": ["攻撃", "統率"]
+  },
+  {
+    "id": "head005",
+     "slot": "head",
+    "name": "聖神の仮面",
+    "stats": ["士気", "統率"]
+  },
+  {
+    "id": "head006",
+     "slot": "head",
+    "name": "天使の輪",
+    "stats": ["速度"]
+  },
+  {
+    "id": "head007",
+     "slot": "head",
+    "name": "紫バラのトゲ冠",
+    "stats": ["士気", "速度"]
+  },
+  {
+    "id": "head008",
+     "slot": "head",
+    "name": "発明家のシルクハット",
+    "stats": ["攻撃", "速度"]
+  },
+  {
+    "id": "head009",
+     "slot": "head",
+    "name": "笑みの仮面",
+    "stats": ["統率", "速度"]
+  },
+  {
+    "id": "armor001",
+     "slot": "armor",
+    "name": "スパイ風メイド服",
+    "stats": ["速度"]
+  },
+  {
+    "id": "armor002",
+    "slot": "armor",
+    "name": "インディゴドレス",
+    "stats": ["統率"]
+  },
+  {
+    "id": "armor003",
+    "slot": "armor",
+    "name": "魔焔のアーマー",
+    "stats": ["攻撃"]
+  },
+  {
+    "id": "armor004",
+    "slot": "armor",
+    "name": "竜鱗甲",
+    "stats": ["士気", "速度"]
+  },
+  {
+    "id": "armor005",
+    "slot": "armor",
+    "name": "風行者",
+    "stats": ["攻撃", "統率"]
+  },
+  {
+    "id": "armor006",
+    "slot": "armor",
+    "name": "エターナルガード",
+    "stats": ["統率", "速度"]
+  },
+  {
+    "id": "armor007",
+    "slot": "armor",
+    "name": "ミストファントム",
+    "stats": ["士気"]
+  },
+  {
+    "id": "armor008",
+    "slot": "armor",
+    "name": "ビーストアーマー",
+    "stats": ["士気", "統率"]
+  },
+  {
+    "id": "armor009",
+    "slot": "armor",
+    "name": "朱麟帝鎧",
+    "stats": ["士気"]
+  },
+  {
+    "id": "armor010",
+    "slot": "armor",
+    "name": "影刃の衣",
+    "stats": ["攻撃", "速度"]
+  },
+  {
+    "id": "armor011",
+    "slot": "armor",
+    "name": "蒼嵐の鎮護鎧",
+    "stats": ["攻撃"]
+  },
+  {
+    "id": "accessory001",
+    "slot": "accessory",
+    "name": "喜悦のフラワーベル",
+    "stats": ["士気", "速度"]
+  },
+  {
+    "id": "accessory002",
+    "slot": "accessory",
+    "name": "魔導書",
+    "stats": ["攻撃"]
+  },
+  {
+    "id": "accessory003",
+    "slot": "accessory",
+    "name": "祈願の頭飾り",
+    "stats": ["士気"]
+  },
+  {
+    "id": "accessory004",
+    "slot": "accessory",
+    "name": "晨星の戦旗",
+    "stats": ["士気", "統率"]
+  },
+  {
+    "id": "accessory005",
+    "slot": "accessory",
+    "name": "神授の伝承",
+    "stats": ["速度"]
+  },
+  {
+    "id": "accessory006",
+    "slot": "accessory",
+    "name": "罪縛りの腕輪",
+    "stats": ["攻撃", "速度"]
+  },
+  {
+    "id": "accessory007",
+    "slot": "accessory",
+    "name": "偏執の正義",
+    "stats": ["統率", "速度"]
+  },
+  {
+    "id": "accessory008",
+    "slot": "accessory",
+    "name": "雷護の電気石",
+    "stats": ["統率"]
+  },
+  {
+    "id": "accessory009",
+    "slot": "accessory",
+    "name": "真理の腕輪",
+    "stats": ["攻撃", "統率"]
+  },
+  {
+    "id": "accessory010",
+    "slot": "accessory",
+    "name": "慧眼の冠",
+    "stats": ["統率", "速度"]
+  },
+  {
+    "id": "accessory011",
+    "slot": "accessory",
+    "name": "星の海の思い出",
+    "stats": ["攻撃"]
+  },
+  {
+    "id": "accessory012",
+    "slot": "accessory",
+    "name": "封陽玉鏡",
+    "stats": []
+  }
+
+
+
+
+]

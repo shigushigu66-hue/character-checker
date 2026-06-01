@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>装備チェッカー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<body>
+
+<div class="header">
+    <h1>装備チェッカー</h1>
+
+    <div class="nav-buttons">
+<button id="export-png-btn">
+    PNG出力
+</button>
+        <a href="index.html">
+            キャラチェッカー
+        </a>
+    </div>
+    <button id="export-json-btn">
+    JSON出力
+</button>
+
+<input
+    type="file"
+    id="import-json"
+    accept=".json"
+    style="display:none"
+>
+
+<button id="import-json-btn">
+    JSON読込
+</button>
+</div>
+
+<div class="filter-bar">
+
+    <select id="slot-filter">
+        <option value="all">全部位</option>
+        <option value="weapon">武器</option>
+        <option value="head">頭</option>
+        <option value="armor">防具</option>
+        <option value="accessory">装飾品</option>
+    </select>
+
+    <select id="stat-filter">
+        <option value="all">全能力</option>
+        <option value="攻撃">攻撃</option>
+        <option value="士気">士気</option>
+        <option value="統率">統率</option>
+        <option value="速度">速度</option>
+    </select>
+
+</div>
+
+<div class="equipment-layout">
+
+    <div id="equipment-grid"></div>
+
+    <div id="equipment-detail">
+        <h2>装備を選択してください</h2>
+    </div>
+
+</div>
+
+<div
+    id="equipment-png-layout"
+    style="display:none;"
+></div>
+
+<script src="equipment.js"></script>
+
+<div
+    id="equipment-png-layout"
+    style="display:none;"
+></div>
+</body>
+</html>
