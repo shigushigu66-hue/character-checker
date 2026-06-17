@@ -96,6 +96,12 @@
     "stats": ["統率", "速度"]
   },
   {
+    "id": "head010",
+     "slot": "head",
+    "name": "羊角の兜",
+    "stats": ["統率"]
+  },
+  {
     "id": "armor001",
      "slot": "armor",
     "name": "スパイ風メイド服",
