@@ -406,3 +406,43 @@ body {
 
     margin-bottom:15px;
 }
+
+.png-card.complete{
+    border:3px solid #ff69b4;
+
+    box-shadow:
+        0 0 8px rgba(255,105,180,.5);
+}
+
+.png-card.missing{
+    opacity:0.45;
+    filter:grayscale(100%);
+}
+
+.cg-complete{
+    border:3px solid #ff69b4;
+
+    box-shadow:
+        0 0 10px rgba(255,105,180,.5);
+}
+
+.png-option{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.cg-complete,
+.png-card.complete{
+
+    border:3px solid #ff69b4;
+
+    box-shadow:
+        0 0 10px
+        rgba(
+            255,
+            105,
+            180,
+            .5
+        );
+}

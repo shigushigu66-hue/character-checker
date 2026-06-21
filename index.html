@@ -36,8 +36,8 @@
         装備チェッカー
     </a>
 
-    <a href="#">
-        CGチェッカー（未作成）
+    <a href="cg.html">
+        CGチェッカー
     </a>
 
     <button id="history-btn">
@@ -48,23 +48,17 @@
 
 <div id="history-modal" class="history-modal">
 
-<div class="history-content">
+    <div class="history-content">
 
-<h2>更新履歴</h2>
+        <div class="history-body">
+        </div>
 
-<ul>
+        <button id="close-history">
+            閉じる
+        </button>
 
-<li>2026/06/21
-    更新履歴の追加
-    メニューの追加
-</li>
-</ul>
+    </div>
 
-<button id="close-history">
-閉じる
-</button>
-
-</div>
 </div>
 
 <div id="menu-overlay"></div>
@@ -122,6 +116,7 @@
 
 <div id="png-layout" style="display:none;"></div>
 
+<script src="history.js"></script>
 <script src="app.js?v=7"></script>
 
 </body>

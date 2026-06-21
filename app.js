@@ -374,48 +374,24 @@ characters.forEach(character => {
 
         let className = "png-card";
 
-        const charText =
-            data.char === -1
-                ? "--"
-                : data.char;
-
-        const equipText =
-            data.equip === -1
-                ? "--"
-                : data.equip;
-
-        const isMissing =
-            data.char === -1 &&
-            data.equip === -1;
-
-        const isPerfect =
-            data.char === 5 &&
-            data.equip === 5;
-
-        const isMaxChar =
-            data.char === 5;
-
-        if (isMissing) {
-            className += " missing";
-        }
-        else if (isPerfect) {
-            className += " perfect";
-        }
-        else if (isMaxChar) {
-            className += " max-char";
-        }
+if (data.progress === 0) {
+    className += " missing";
+}
+else if (data.progress === 6) {
+    className += " complete";
+}
 
         const card = document.createElement("div");
 
         card.className = className;
 
-        card.innerHTML = `
-            <img src="images/${character.id}.webp">
+card.innerHTML = `
+    <img src="images/${character.id}.webp">
 
-            <div class="png-status">
-                本体${charText}/5｜装備${equipText}/5
-            </div>
-        `;
+    <div class="png-status">
+        ${data.progress}/6
+    </div>
+`;
 
         pngGrid.appendChild(card);
     });

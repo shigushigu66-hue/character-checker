@@ -2,11 +2,13 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>装備チェッカー</title>
-    <link rel="stylesheet" href="style.css?v=1">
+    <title>CGチェッカー</title>
+<link rel="stylesheet" href="style.css?v=4">
 </head>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <body>
+
+
 
 <div id="side-menu" class="side-menu">
 
@@ -14,8 +16,7 @@
         ×
     </button>
 
-
-<div class="menu-user-area">
+    <div class="menu-user-area">
 
     <div class="menu-user">
         UserName
@@ -59,19 +60,34 @@
     </div>
 
 </div>
+
 <div id="menu-overlay"></div>
+
 
 <div class="header">
     <button id="menu-btn" class="menu-btn">
 ☰
 </button>
-    <h1>装備チェッカー</h1>
-    <div class="nav-buttons">
-<button id="export-png-btn">
+<h1>CGチェッカー</h1>
+
+<div class="nav-buttons">
+<label class="png-option">
+    <input
+        type="checkbox"
+        id="hide-complete-cg"
+    >
+    完了CGを除外
+</label>
+
+<button id="export-btn">
     PNG出力
 </button>
-    </div>
-    <button id="export-json-btn">
+
+<button id="reset-btn">
+    リセット
+</button>
+
+<button id="export-json-btn">
     JSON出力
 </button>
 
@@ -87,47 +103,33 @@
 </button>
 </div>
 
+</div>
+
 <div class="filter-bar">
 
-    <select id="slot-filter">
-        <option value="all">全部位</option>
-        <option value="weapon">武器</option>
-        <option value="head">頭</option>
-        <option value="armor">防具</option>
-        <option value="accessory">装飾品</option>
-    </select>
+    <input
+        type="text"
+        id="search-box"
+        placeholder="キャラ名検索">
 
-    <select id="stat-filter">
-        <option value="all">全能力</option>
-        <option value="攻撃">攻撃</option>
-        <option value="士気">士気</option>
-        <option value="統率">統率</option>
-        <option value="速度">速度</option>
+    <select id="nation-filter">
+        <option value="all">全陣営</option>
+        <option value="神霄帝国">神霄帝国</option>
+        <option value="イズモ">イズモの国</option>
+        <option value="ミスト">ミスト王国</option>
+        <option value="エレン">エレン連邦</option>
+        <option value="聖教会">聖教会</option>
+        <option value="ウトピア">ウトピア</option>
+        <option value="中立">中立</option>
     </select>
 
 </div>
 
-<div class="equipment-layout">
-
-    <div id="equipment-grid"></div>
-
-    <div id="equipment-detail">
-        <h2>装備を選択してください</h2>
-    </div>
-
-</div>
-
-<div
-    id="equipment-png-layout"
-    style="display:none;"
-></div>
+<div id="character-grid"></div>
 
 <script src="history.js"></script>
-<script src="equipment.js"></script>
+<script src="cg.js"></script>
 
-<div
-    id="equipment-png-layout"
-    style="display:none;"
-></div>
 </body>
+</html>
 </html>
