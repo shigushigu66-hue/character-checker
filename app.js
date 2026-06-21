@@ -341,11 +341,23 @@ document.body.appendChild(exportArea);
         `${String(now.getMonth() + 1).padStart(2, "0")}/` +
         `${String(now.getDate()).padStart(2, "0")}`;
 
+const userName =
+    localStorage.getItem("userName")
+    || "NoName";
+
+
     exportArea.innerHTML = `
-        <div class="png-header">
-            <h1>キャラ装備所持率チェッカー</h1>
-            <div class="png-date">${dateText}</div>
-        </div>
+<div class="png-header">
+    <h1>キャラ装備所持率チェッカー</h1>
+
+    <div class="png-user">
+        ${userName}
+    </div>
+
+    <div class="png-date">
+        ${dateText}
+    </div>
+</div>
 
         <div class="png-grid"></div>
     `;
@@ -451,3 +463,104 @@ function resetData() {
 
     loadCharacters();
 }
+
+const menuBtn =
+    document.getElementById("menu-btn");
+
+const sideMenu =
+    document.getElementById("side-menu");
+
+const overlay =
+    document.getElementById("menu-overlay");
+
+menuBtn.onclick = () => {
+
+    sideMenu.classList.add("open");
+
+    overlay.classList.add("show");
+
+    menuBtn.classList.add("hide");
+};
+
+overlay.onclick = () => {
+
+    sideMenu.classList.remove("open");
+
+    overlay.classList.remove("show");
+
+    menuBtn.classList.remove("hide");
+};
+document
+.getElementById("history-btn")
+.onclick = () => {
+
+    document
+    .getElementById("history-modal")
+    .classList.add("show");
+};
+
+document
+.getElementById("close-history")
+.onclick = () => {
+
+    document
+    .getElementById("history-modal")
+    .classList.remove("show");
+};
+
+function loadUserName() {
+
+    let userName =
+        localStorage.getItem("userName");
+
+    if (!userName) {
+
+        userName = "NoName";
+
+        localStorage.setItem(
+            "userName",
+            userName
+        );
+    }
+
+    document.querySelector(
+        ".menu-user"
+    ).textContent = userName;
+}
+
+loadUserName();
+
+document
+.getElementById("change-name-btn")
+.onclick = () => {
+
+    let newName =
+        prompt(
+            "ユーザー名を入力",
+            localStorage.getItem("userName")
+        );
+
+    if (!newName) return;
+
+    newName =
+        newName.trim()
+        .substring(0,25);
+
+    localStorage.setItem(
+        "userName",
+        newName
+    );
+
+    loadUserName();
+};
+
+document
+.getElementById("close-menu")
+.onclick = () => {
+
+    sideMenu.classList.remove("open");
+
+    overlay.classList.remove("show");
+
+    menuBtn.classList.remove("hide");
+};

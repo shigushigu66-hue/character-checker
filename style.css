@@ -267,3 +267,142 @@ body {
     background: white;
 }
 
+.menu-btn{
+    position: static;
+
+    width:40px;
+    height:40px;
+
+    font-size:24px;
+}
+
+.side-menu{
+    position:fixed;
+
+    top:0;
+    left:-280px;
+
+    width:280px;
+    height:100%;
+
+    box-sizing:border-box; /* ←追加 */
+
+    background:#222;
+
+    color:white;
+
+    z-index:1000;
+
+    transition:.3s;
+
+    padding:20px;
+}
+
+.side-menu.open{
+    left:0;
+}
+
+.side-menu a,
+.side-menu button{
+    display:block;
+
+    width:100%;
+
+    box-sizing:border-box; /* ←追加 */
+
+    margin-bottom:12px;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    background:#444;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+.menu-user{
+    font-size:20px;
+    font-weight:bold;
+
+    margin-bottom:20px;
+
+    word-break:break-all;
+}
+
+#menu-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.5);
+
+    display:none;
+
+    z-index:999;
+}
+
+#menu-overlay.show{
+    display:block;
+}
+
+.history-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.5);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:2000;
+}
+
+.history-modal.show{
+    display:flex;
+}
+
+.history-content{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    width:90%;
+    max-width:500px;
+}
+
+.png-user{
+    margin-top:10px;
+
+    font-size:20px;
+    font-weight:bold;
+
+    color:#333;
+}
+
+.menu-btn.hide{
+    display:none;
+}
+
+#close-menu{
+    width:40px;
+    height:40px;
+
+    font-size:24px;
+
+    margin-bottom:15px;
+}

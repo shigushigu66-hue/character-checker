@@ -3,21 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <title>装備チェッカー</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1">
 </head>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <body>
 
-<div class="header">
-    <h1>装備チェッカー</h1>
+<div id="side-menu" class="side-menu">
 
+        <button id="close-menu">
+        ×
+    </button>
+
+
+<div class="menu-user-area">
+
+    <div class="menu-user">
+        UserName
+    </div>
+
+    <button id="change-name-btn">
+        名前変更
+    </button>
+
+</div>
+
+    <a href="index.html">
+        キャラチェッカー
+    </a>
+
+    <a href="equipment.html">
+        装備チェッカー
+    </a>
+
+    <a href="#">
+        CGチェッカー（未作成）
+    </a>
+
+    <button id="history-btn">
+        更新履歴
+    </button>
+
+</div>
+
+<div id="history-modal" class="history-modal">
+
+<div class="history-content">
+
+<h2>更新履歴</h2>
+
+<ul>
+
+<li>2026/06/21
+    更新履歴の追加
+    メニューの追加
+</li>
+</ul>
+
+<button id="close-history">
+閉じる
+</button>
+
+</div>
+</div>
+
+<div id="menu-overlay"></div>
+
+<div class="header">
+    <button id="menu-btn" class="menu-btn">
+☰
+</button>
+    <h1>装備チェッカー</h1>
     <div class="nav-buttons">
 <button id="export-png-btn">
     PNG出力
 </button>
-        <a href="index.html">
-            キャラチェッカー
-        </a>
     </div>
     <button id="export-json-btn">
     JSON出力
