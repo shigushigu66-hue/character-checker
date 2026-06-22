@@ -179,5 +179,8 @@
   "nation": "ミスト"},
   {"id": "mikaeru",
   "name": "ミカエル",
-  "nation": "聖教会"}
+  "nation": "聖教会"},
+  {"id": "reviatan",
+  "name": " レヴィアタン",
+  "nation": "ウトピア"}
 ]
