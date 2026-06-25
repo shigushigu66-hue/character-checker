@@ -374,11 +374,11 @@ characters.forEach(character => {
 
         let className = "png-card";
 
-if (data.progress === 0) {
+if (
+    data.char === -1 &&
+    data.equip === -1
+) {
     className += " missing";
-}
-else if (data.progress === 6) {
-    className += " complete";
 }
 
         const card = document.createElement("div");
@@ -389,7 +389,17 @@ card.innerHTML = `
     <img src="images/${character.id}.webp">
 
     <div class="png-status">
-        ${data.progress}/6
+        本体 ${
+            data.char === -1
+            ? "--"
+            : data.char
+        }/5
+        <br>
+        装備 ${
+            data.equip === -1
+            ? "--"
+            : data.equip
+        }/5
     </div>
 `;
 
