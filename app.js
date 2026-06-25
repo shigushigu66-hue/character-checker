@@ -381,6 +381,18 @@ if (
     className += " missing";
 }
 
+if (
+    data.char === 5 &&
+    data.equip === 5
+) {
+    className += " both-complete";
+}
+else if (
+    data.char === 5
+) {
+    className += " char-complete";
+}
+
         const card = document.createElement("div");
 
         card.className = className;

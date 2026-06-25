@@ -446,3 +446,11 @@ body {
             .5
         );
 }
+
+.png-card.both-complete{
+    border:3px solid #ff4444;
+}
+
+.png-card.char-complete{
+    border:3px solid #3399ff;
+}
