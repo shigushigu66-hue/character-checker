@@ -185,5 +185,8 @@
   "nation": "ウトピア"},
   {"id": "kyasarin sihuku",
   "name": "キャサリン",
-  "nation": "聖教会"}
+  "nation": "聖教会"},
+    {"id": "nainopetora",
+  "name": "ナイノペトラ",
+  "nation": "中立"}
 ]
