@@ -188,5 +188,8 @@
   "nation": "聖教会"},
     {"id": "nainopetora",
   "name": "ナイノペトラ",
-  "nation": "中立"}
+  "nation": "中立"},
+   {"id": "joukan",
+  "name": "上官靖児",
+  "nation": "神霄帝国"}
 ]
