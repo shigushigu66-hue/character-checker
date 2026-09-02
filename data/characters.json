@@ -191,5 +191,11 @@
   "nation": "中立"},
    {"id": "joukan",
   "name": "上官靖児",
-  "nation": "神霄帝国"}
+  "nation": "神霄帝国"},
+  {"id": "doresuheren",
+  "name": "ヘレン",
+  "nation": "中立"},
+  {"id": "mashiro",
+  "name": "茉白",
+  "nation": "イズモ"}
 ]
