@@ -102,6 +102,12 @@
     "stats": ["統率"]
   },
   {
+    "id": "head011",
+     "slot": "head",
+    "name": "黒銀の面",
+    "stats": ["速度"]
+  },
+  {
     "id": "armor001",
      "slot": "armor",
     "name": "スパイ風メイド服",
@@ -166,6 +172,12 @@
     "slot": "armor",
     "name": "蒼嵐の鎮護鎧",
     "stats": ["攻撃"]
+  },
+  {
+    "id": "armor012",
+    "slot": "armor",
+    "name": "ブラッド装束",
+    "stats": ["速度"]
   },
   {
     "id": "accessory001",
@@ -238,7 +250,14 @@
     "slot": "accessory",
     "name": "封陽玉鏡",
     "stats": ["士気"]
+  },
+    {
+    "id": "accessory013",
+    "slot": "accessory",
+    "name": "仙道明珠",
+    "stats": ["速度"]
   }
+
 
 
 
