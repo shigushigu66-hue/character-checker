@@ -200,5 +200,8 @@
   "nation": "イズモ"},
   {"id": "casuthia",
   "name": "カスティア",
-  "nation": "聖教会"}
+  "nation": "聖教会"},
+  {"id": "ryuu",
+  "name": "柳煙然",
+  "nation": "神霄帝国"}
 ]
