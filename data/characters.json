@@ -203,5 +203,8 @@
   "nation": "聖教会"},
   {"id": "ryuu",
   "name": "柳煙然",
-  "nation": "神霄帝国"}
+  "nation": "神霄帝国"},
+  {"id": "emeria_Halloween",
+  "name": "エメリア",
+  "nation": "エレン"}
 ]
