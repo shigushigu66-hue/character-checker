@@ -206,5 +206,8 @@
   "nation": "神霄帝国"},
   {"id": "emeria_Halloween",
   "name": "エメリア",
-  "nation": "エレン"}
+  "nation": "エレン"},
+  {"id": "aurora",
+  "name": "オーロラ",
+  "nation": "ミスト"}
 ]
