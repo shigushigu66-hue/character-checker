@@ -209,5 +209,8 @@
   "nation": "エレン"},
   {"id": "aurora",
   "name": "オーロラ",
-  "nation": "ミスト"}
+  "nation": "ミスト"},
+  {"id": "Kanthyllis",
+  "name": "カンシリス",
+  "nation":"聖教会"}
 ]
